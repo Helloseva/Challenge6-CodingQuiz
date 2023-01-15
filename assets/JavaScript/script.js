@@ -1,3 +1,12 @@
+// variables for each page //
+var page0 = document.querySelector("#page0");
+var page1 = document.querySelector("#page1");
+var page2 = document.querySelector("#page2");
+var page3 = document.querySelector("#page3");
+var page4 = document.querySelector("#page4");
+var pageEnd = document.querySelector("#pageEnd");
+var pageHighScores = document.querySelector("#pageHighScores");
+
 // functions for timer, score, and game end if timer runs out //
 var time = 75;
 var score = 0;
