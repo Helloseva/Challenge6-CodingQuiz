@@ -1,48 +1,106 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Coding Quiz</title>
 
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Coding Quiz</title>
 
-  <body>
-    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
 
-    <div class="timer">Time: <span id="time">0</span></div>
+<body>
+  <!-- div to place the countdown timer -->
+  <div id="countdown"></div>
 
-    <div class="wrapper">
-      <div id="start-screen" class="start">
-        <h1>Coding Quiz Challenge</h1>
-        <p>
-          Try to answer the following code-related questions within the time
-          limit. Keep in mind that incorrect answers will penalize your
-          score/time by ten seconds!
-        </p>
-        <button id="start">Start Quiz</button>
-      </div>
-
-      <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-      </div>
-
-      <div id="end-screen" class="hide">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
-      </div>
-
-      <div id="feedback" class="feedback hide"></div>
+  <!-- start page with start quiz button -->
+  <div id="page0" class="show">
+    <h1>Coding Quiz Challenge</h1>
+    <p>Answer the following questions about coding within the time limit.</p>
+    <p>
+      Keep in mind that incorrect answers will penalize your score and your
+      time by 10 seconds!
+    </p>
+    <button id="btn" type="button">Start Quiz</button>
+  </div>
+  <!-- start of divs for each multiple choice question -->
+  <div id="page1" class="hide">
+    <h2>Which operator is used to assign a value to a variable?</h2>
+    <div class="btnGroup">
+      <button class="btnWrong" type="button">1. -</button>
+      <button class="btnWrong" type="button">2. *</button>
+      <button class="btnWrong" type="button">3. x</button>
+      <button class="btnRight" type="button">4. =</button>
     </div>
+  </div>
+  <div id="page2" class="hide">
+    <h2>
+      How do you write "Hello World" in an alert box?
+    </h2>
+    <div class="btnGroup">
+      <button class="btnWrong" type="button">
+        1. alertBox("Hello World");
+      </button>
+      <button class="btnWrong" type="button">
+        2. msgBox("Hello World");
+      </button>
+      <button class="btnWrong" type="button">
+        3. msg("Hello World");
+      </button>
+      <button class="btnRight" type="button">
+        4. alert("Hello World");
+      </button>
+    </div>
+  </div>
+  <div id="page3" class="hide">
+    <h2>How do you round the number 7.25, to the nearest integer?</h2>
+    <div class="btnGroup">
+      <button class="btnWrong" type="button">1. round(7.25)</button>
+      <button class="btnWrong" type="button">2. Math.rnd(7.25)</button>
+      <button class="btnWrong" type="button">3. rnd(7.25)</button>
+      <button class="btnRight" type="button">4. Math.round(7.25)</button>
+    </div>
+  </div>
+  <div id="page4" class="hide">
+    <h2>
+      How to write an IF statement in JavaScript?
+    </h2>
+    <div class="btnGroup">
+      <button class="btnWrong" type="button">1. if i = 5</button>
+      <button class="btnWrong" type="button">2. if i= 5 then</button>
+      <button class="btnWrong" type="button">3. if i ==5 then</button>
+      <button class="btnRight" type="button">4. if (i==5)</button>
+    </div>
+  </div>
+  <!-- end page for quiz to show score and submit score and initials -->
+  <div id="pageEnd" class="hide">
+    <h1 id="allDone" class="hide">All Done!</h1>
+    <h1 id="gameOver" class="hide">Time's Up!</h1>
+    <h3 id="score">You have run out of time, making your final score 0</h3>
+    <form action="score">
+      <label for="initials">Enter intitials: </label>
+      <input type="text" id="saveInitials" name="initials" />
+      <input id="submit" type="submit" />
+    </form>
+  </div>
+  <!-- page to see last highscore with initials, go back button and clear score button -->
+  <div id="pageHighScores" class="hide">
+    <h1>Highscore</h1>
+    <p><strong>Score:</strong> <span id="highScoreSpan"></span></p>
+    <button id="goBack">Go Back</button>
+    <button id="clearScores">Clear Highscore</button>
+  </div>
 
-    <script src="./assets/js/questions.js"></script>
-    <script src="./assets/js/logic.js"></script>
-  </body>
+  <!-- divs for correct and wrong tags that pop up when multiple choice answer is clicked -->
+  <div class="hide" id="correct">
+    <p>Correct! :)</p>
+  </div>
+  <div class="hide" id="wrong">
+    <p>Wrong :(</p>
+  </div>
+
+  <script src="./assets/javascript/script.js"></script>
+</body>
+
 </html>
