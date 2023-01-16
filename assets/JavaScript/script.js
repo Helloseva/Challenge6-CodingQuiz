@@ -84,6 +84,40 @@ page0.addEventListener("click", function (event) {
     }
   });
 
+
+// local storage //
+var submit = document.querySelector("#submit");
+
+submit.addEventListener("click", function (e) {
+  e.preventDefault();
+  var inputValue = document.getElementById("saveInitials").value;
+  var localStorageName = "userScore";
+  var userScore = {
+    initials: inputValue,
+    score: score,
+  };
+  localStorage.setItem(localStorageName, JSON.stringify(userScore));
+  var highScoreSpan = document.getElementById("highScoreSpan");
+  var localStorageValues = JSON.parse(localStorage.getItem(localStorageName));
+  console.log("localStorageValues", localStorageValues);
+  highScoreSpan.textContent =
+    "" + localStorageValues.initials + ", " + localStorageValues.score;
+});
+
+var clearScores = document.getElementById("clearScores");
+clearScores.addEventListener("click", function () {
+  localStorage.clear();
+  highScoreSpan.textContent = "";
+});
+
+var goBack = document.getElementById("goBack");
+goBack.addEventListener("click", function () {
+  pageHighScores.className = "hide";
+  page0.className = "show";
+  time = 75;
+  document.getElementById("countdown").innerHTML = "";
+});
+
   // functions for  notifications //
 var wrong = document.querySelector("#wrong");
 var wrongBtns = document.querySelectorAll(".btnWrong");
