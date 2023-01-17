@@ -34,7 +34,7 @@ This page is about using basic JavaScript skills to create a financial analysis 
 Screeshot of the Web Page:
 
 
-![screenshot of page](images/screenshot.png)
+![screenshot of page](assets/images/screenshot.png)
 
 
 ## Credits
