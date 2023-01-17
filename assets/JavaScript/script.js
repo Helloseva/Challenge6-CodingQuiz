@@ -1,25 +1,23 @@
-// variables for each page //
-var page0 = document.querySelector("#page0");
-var page1 = document.querySelector("#page1");
-var page2 = document.querySelector("#page2");
-var page3 = document.querySelector("#page3");
-var page4 = document.querySelector("#page4");
-var pageEnd = document.querySelector("#pageEnd");
-var pageHighScores = document.querySelector("#pageHighScores");
-
-// functions for timer, score, and game end if timer runs out //
+// global variables //
+var quizPage = document.querySelector("#quizPage");
+var question1 = document.querySelector("#question1");
+var question2 = document.querySelector("#question2");
+var question3 = document.querySelector("#question3");
+var question4 = document.querySelector("#question4");
+var quizPageEnd = document.querySelector("#quizPageEnd");
+var quizPageHighScores = document.querySelector("#quizPageHighScores");
 var time = 75;
 var score = 0;
 var gameOver = document.querySelector("#gameOver");
 document.getElementById("btn").onclick = timer;
 
 function endScreen() {
-  page0.className = "hide";
-  page1.className = "hide";
-  page2.className = "hide";
-  page3.className = "hide";
-  page4.className = "hide";
-  pageEnd.className = "show";
+  quizPage.className = "hide";
+  question1.className = "hide";
+  question2.className = "hide";
+  question3.className = "hide";
+  question4.className = "hide";
+  quizPageEnd.className = "show";
 }
 
 function timer() {
@@ -41,46 +39,46 @@ function timer() {
 
 
 // functions for hiding and showing questions //
-page0.addEventListener("click", function (event) {
+quizPage.addEventListener("click", function (event) {
   if (event.target.nodeName === "BUTTON") {
-    page0.className = "hide";
-    page1.className = "show";
+    quizPage.className = "hide";
+    question1.className = "show";
   }
 });
 
-page1.addEventListener("click", function (event) {
+question1.addEventListener("click", function (event) {
   if (event.target.nodeName === "BUTTON") {
-    page1.className = "hide";
-    page2.className = "show";
+    question1.className = "hide";
+    question2.className = "show";
   }
 });
 
-page2.addEventListener("click", function (event) {
+question2.addEventListener("click", function (event) {
   if (event.target.nodeName === "BUTTON") {
-    page2.className = "hide";
-    page3.className = "show";
+    question2.className = "hide";
+    question3.className = "show";
   }
 });
-page3.addEventListener("click", function (event) {
+question3.addEventListener("click", function (event) {
   if (event.target.nodeName === "BUTTON") {
-    page3.className = "hide";
-    page4.className = "show";
+    question3.className = "hide";
+    question4.className = "show";
   }
 });
-page4.addEventListener("click", function (event) {
+question4.addEventListener("click", function (event) {
   if (event.target.nodeName === "BUTTON") {
-    page4.className = "hide";
-    pageEnd.className = "show";
+    question4.className = "hide";
+    quizPageEnd.className = "show";
     // saves score, stops timer, write score screen //
     score = time;
     document.getElementById("score").innerHTML = "Your Final score is " + score;
     time = 0;
   }
 });
-pageEnd.addEventListener("click", function (event) {
+quizPageEnd.addEventListener("click", function (event) {
   if (event.target === document.getElementById("submit")) {
-    pageEnd.className = "hide";
-    pageHighScores.className = "show";
+    quizPageEnd.className = "hide";
+    quizPageHighScores.className = "show";
   }
 });
 
@@ -112,8 +110,8 @@ clearScores.addEventListener("click", function () {
 
 var goBack = document.getElementById("goBack");
 goBack.addEventListener("click", function () {
-  pageHighScores.className = "hide";
-  page0.className = "show";
+  quizPageHighScores.className = "hide";
+  quizPage.className = "show";
   time = 75;
   document.getElementById("countdown").innerHTML = "";
 });
