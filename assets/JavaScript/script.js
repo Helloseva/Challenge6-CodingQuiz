@@ -82,6 +82,31 @@ quizPageEnd.addEventListener("click", function (event) {
   }
 });
 
+// functions for  feedback //
+var wrong = document.querySelector("#wrong");
+var wrongBtns = document.querySelectorAll(".btnWrong");
+
+for (var i = 0; i < wrongBtns.length; i++) {
+  wrongBtns[i].onclick = function () {
+    time -= 10;
+    wrong.className = "show";
+    setTimeout(function () {
+      wrong.className = "hide";
+    }, 1000);
+  };
+}
+
+var correct = document.querySelector("#correct");
+var correctBtns = document.querySelectorAll(".btnRight");
+
+for (var i = 0; i < correctBtns.length; i++) {
+  correctBtns[i].onclick = function () {
+    correct.className = "show";
+    setTimeout(function () {
+      correct.className = "hide";
+    }, 1000);
+  };
+}
 
 // local storage //
 var submit = document.querySelector("#submit");
@@ -115,30 +140,3 @@ goBack.addEventListener("click", function () {
   time = 75;
   document.getElementById("countdown").innerHTML = "";
 });
-
-  // functions for  feedback //
-var wrong = document.querySelector("#wrong");
-var wrongBtns = document.querySelectorAll(".btnWrong");
-
-for (var i = 0; i < wrongBtns.length; i++) {
-  wrongBtns[i].onclick = function () {
-    time -= 10;
-    wrong.className = "show";
-    setTimeout(function () {
-      wrong.className = "hide";
-    }, 1000);
-  };
-}
-
-var correct = document.querySelector("#correct");
-var correctBtns = document.querySelectorAll(".btnRight");
-
-for (var i = 0; i < correctBtns.length; i++) {
-  correctBtns[i].onclick = function () {
-    correct.className = "show";
-    setTimeout(function () {
-      correct.className = "hide";
-    }, 1000);
-  };
-}
-  
