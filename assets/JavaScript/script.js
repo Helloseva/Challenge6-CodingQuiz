@@ -42,47 +42,47 @@ function timer() {
 
 // functions for hiding and showing questions //
 page0.addEventListener("click", function (event) {
-    if (event.target.nodeName === "BUTTON") {
-      page0.className = "hide";
-      page1.className = "show";
-    }
-  });
-  
-  page1.addEventListener("click", function (event) {
-    if (event.target.nodeName === "BUTTON") {
-      page1.className = "hide";
-      page2.className = "show";
-    }
-  });
-  
-  page2.addEventListener("click", function (event) {
-    if (event.target.nodeName === "BUTTON") {
-      page2.className = "hide";
-      page3.className = "show";
-    }
-  });
-  page3.addEventListener("click", function (event) {
-    if (event.target.nodeName === "BUTTON") {
-      page3.className = "hide";
-      page4.className = "show";
-    }
-  });
-  page4.addEventListener("click", function (event) {
-    if (event.target.nodeName === "BUTTON") {
-      page4.className = "hide";
-      pageEnd.className = "show";
-      // saves score, stops timer, write score screen //
-      score = time;
-      document.getElementById("score").innerHTML = "Your Final score is " + score;
-      time = 0;
-    }
-  });
-  pageEnd.addEventListener("click", function (event) {
-    if (event.target === document.getElementById("submit")) {
-      pageEnd.className = "hide";
-      pageHighScores.className = "show";
-    }
-  });
+  if (event.target.nodeName === "BUTTON") {
+    page0.className = "hide";
+    page1.className = "show";
+  }
+});
+
+page1.addEventListener("click", function (event) {
+  if (event.target.nodeName === "BUTTON") {
+    page1.className = "hide";
+    page2.className = "show";
+  }
+});
+
+page2.addEventListener("click", function (event) {
+  if (event.target.nodeName === "BUTTON") {
+    page2.className = "hide";
+    page3.className = "show";
+  }
+});
+page3.addEventListener("click", function (event) {
+  if (event.target.nodeName === "BUTTON") {
+    page3.className = "hide";
+    page4.className = "show";
+  }
+});
+page4.addEventListener("click", function (event) {
+  if (event.target.nodeName === "BUTTON") {
+    page4.className = "hide";
+    pageEnd.className = "show";
+    // saves score, stops timer, write score screen //
+    score = time;
+    document.getElementById("score").innerHTML = "Your Final score is " + score;
+    time = 0;
+  }
+});
+pageEnd.addEventListener("click", function (event) {
+  if (event.target === document.getElementById("submit")) {
+    pageEnd.className = "hide";
+    pageHighScores.className = "show";
+  }
+});
 
 
 // local storage //
