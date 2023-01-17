@@ -11,10 +11,9 @@
 </head>
 
 <body>
-  <!-- div to place the countdown timer -->
   <div id="countdown"></div>
 
-  <!-- start page with start quiz button -->
+  <!-- quiz page start with button -->
   <div id="quizPage" class="show">
     <h1>Coding Quiz Challenge</h1>
     <p>Answer the following questions about coding within the time limit.</p>
@@ -24,7 +23,8 @@
     </p>
     <button id="btn" type="button">Start Quiz</button>
   </div>
-  <!-- start of divs for each multiple choice question -->
+
+  <!-- multiple choice questions start -->
   <div id="question1" class="hide">
     <h2>Which operator is used to assign a value to a variable?</h2>
     <div class="btnGroup">
@@ -73,7 +73,8 @@
       <button class="btnRight" type="button">4. if (i==5)</button>
     </div>
   </div>
-  <!-- end page for quiz to show score and submit score and initials -->
+
+  <!-- final score, enter initials and submit button page -->
   <div id="quizPageEnd" class="hide">
     <h1 id="gameOver" class="hide">Time's Up!</h1>
     <h3 id="score">You have run out of time, making your final score 0</h3>
@@ -83,7 +84,8 @@
       <input id="submit" type="submit" />
     </form>
   </div>
-  <!-- page to see last highscore with initials, go back button and clear score button -->
+  
+  <!-- Highscore with initials, go back button and clear score button -->
   <div id="quizPageHighScores" class="hide">
     <h1>Highscore</h1>
     <p><strong>Score:</strong> <span id="highScoreSpan"></span></p>
@@ -91,12 +93,12 @@
     <button id="clearScores">Clear Highscore</button>
   </div>
 
-  <!-- divs for correct and wrong tags that pop up when multiple choice answer is clicked -->
+  <!-- correct and wrong tags when question is answered -->
   <div class="hide" id="correct">
-    <p>Correct! :)</p>
+    <p>Wow, Correct!</p>
   </div>
   <div class="hide" id="wrong">
-    <p>Wrong :(</p>
+    <p>Wrong!</p>
   </div>
 
   <script src="./assets/javascript/script.js"></script>
