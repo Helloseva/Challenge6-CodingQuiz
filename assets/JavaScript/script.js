@@ -116,7 +116,7 @@ goBack.addEventListener("click", function () {
   document.getElementById("countdown").innerHTML = "";
 });
 
-  // functions for  notifications //
+  // functions for  feedback //
 var wrong = document.querySelector("#wrong");
 var wrongBtns = document.querySelectorAll(".btnWrong");
 
