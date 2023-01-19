@@ -1,4 +1,6 @@
 // global variables //
+var time = 75;
+var score = 0;
 var quizPage = document.querySelector("#quizPage");
 var question1 = document.querySelector("#question1");
 var question2 = document.querySelector("#question2");
@@ -6,8 +8,6 @@ var question3 = document.querySelector("#question3");
 var question4 = document.querySelector("#question4");
 var quizPageEnd = document.querySelector("#quizPageEnd");
 var quizPageHighScores = document.querySelector("#quizPageHighScores");
-var time = 75;
-var score = 0;
 var gameOver = document.querySelector("#gameOver");
 document.getElementById("btn").onclick = timer;
 
