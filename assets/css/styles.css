@@ -1,12 +1,11 @@
 body {
   font-family: Arial;
-  font-size: 120%;
 }
 
 .show {
   display: block;
-  padding-left: 475px;
-  padding-right: 475px;
+  padding-left: 400px;
+  padding-right: 400px;
   text-align: left;
 }
 
@@ -15,29 +14,41 @@ body {
 }
 
 h1 {
-  padding-bottom: 25px;
-  padding-top: 40px;
+  text-align: left;
+  font-size: 30px;
+  margin: 60px;
 }
 
-#quizPage,
-#QuizPageEnd,
-#quizPageHighScores {
-  text-align: center;
+p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#startBtn {
+  font-size: large;
+  padding: 15px;
+  background-color: pink;
+}
+
+.centerBtn {
+  padding-left: 200px;
 }
 
 button {
-  display: inline-block;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 100%;
-  background-color: #563d7c;
-  border-radius: 5px;
-  padding: 2px 10px;
-  color: white;
-  border: 0;
-  transition: background-color 0.1s;
+  display: block;
+  font-size: medium;
+  padding: 15px;
+  background-color: white;
 }
 
-button:hover {
-  background-color: #8570a5;
+#submit {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+#saveInitials {
+  height: 30px;
+  width: 80px;
+  font-size: 37px;
+  text-align: center;
 }
