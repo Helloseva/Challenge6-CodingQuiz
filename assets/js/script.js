@@ -7,9 +7,9 @@ var question2 = document.querySelector("#question2");
 var question3 = document.querySelector("#question3");
 var question4 = document.querySelector("#question4");
 var quizPageEnd = document.querySelector("#quizPageEnd");
-var quizPageHighScores = document.querySelector("#quizPageHighScores");
+var quizPageHighScore = document.querySelector("#quizPageHighScore");
 var gameOver = document.querySelector("#gameOver");
-document.getElementById("btn").onclick = timer;
+document.getElementById("startBtn").onclick = timer;
 
 function endScreen() {
   quizPage.className = "hide";
@@ -78,7 +78,7 @@ question4.addEventListener("click", function (event) {
 quizPageEnd.addEventListener("click", function (event) {
   if (event.target === document.getElementById("submit")) {
     quizPageEnd.className = "hide";
-    quizPageHighScores.className = "show";
+    quizPageHighScore.className = "show";
   }
 });
 
@@ -135,7 +135,7 @@ clearScores.addEventListener("click", function () {
 
 var goBack = document.getElementById("goBack");
 goBack.addEventListener("click", function () {
-  quizPageHighScores.className = "hide";
+  quizPageHighScore.className = "hide";
   quizPage.className = "show";
   time = 75;
   document.getElementById("countdown").innerHTML = "";
