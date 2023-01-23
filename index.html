@@ -22,70 +22,70 @@
       time by 10 seconds!
     </p>
     <div class="centerBtn">
-    <button id="startBtn" type="button">Start Quiz</button>
-  </div>
+      <button id="startBtn" type="button">Start Quiz</button>
+    </div>
   </div>
 
   <!-- multiple choice questions start -->
   <div id="question1" class="hide">
     <h2>Which operator is used to assign a value to a variable?</h2>
-      <button class="btnWrong">1. -</button>
-      <button class="btnWrong">2. *</button>
-      <button class="btnWrong">3. x</button>
-      <button class="btnRight">4. =</button>
-    </div>
+    <button class="btnWrong">1. -</button>
+    <button class="btnWrong">2. *</button>
+    <button class="btnWrong">3. x</button>
+    <button class="btnRight">4. =</button>
+  </div>
   <div id="question2" class="hide">
     <h2>How do you write "Hello World" in an alert box?</h2>
-      <button class="btnWrong">
-        1. alertBox("Hello World");
-      </button>
-      <button class="btnWrong">
-        2. msgBox("Hello World");
-      </button>
-      <button class="btnWrong">
-        3. msg("Hello World");
-      </button>
-      <button class="btnRight">
-        4. alert("Hello World");
-      </button>
-    </div>
-  
+    <button class="btnWrong">
+      1. alertBox("Hello World");
+    </button>
+    <button class="btnWrong">
+      2. msgBox("Hello World");
+    </button>
+    <button class="btnWrong">
+      3. msg("Hello World");
+    </button>
+    <button class="btnRight">
+      4. alert("Hello World");
+    </button>
+  </div>
+
   <div id="question3" class="hide">
     <h2>How do you round the number 7.25, to the nearest integer?</h2>
-      <button class="btnWrong">1. round(7.25)</button>
-      <button class="btnWrong">2. Math.rnd(7.25)</button>
-      <button class="btnWrong">3. rnd(7.25)</button>
-      <button class="btnRight">4. Math.round(7.25)</button>
-    </div>
+    <button class="btnWrong">1. round(7.25)</button>
+    <button class="btnWrong">2. Math.rnd(7.25)</button>
+    <button class="btnWrong">3. rnd(7.25)</button>
+    <button class="btnRight">4. Math.round(7.25)</button>
+  </div>
 
   <div id="question4" class="hide">
     <h2>How to write an IF statement in JavaScript?</h2>
-      <button class="btnWrong">1. if i = 5</button>
-      <button class="btnWrong">2. if i= 5 then</button>
-      <button class="btnWrong">3. if i ==5 then</button>
-      <button class="btnRight">4. if (i==5)</button>
-    </div>
+    <button class="btnWrong">1. if i = 5</button>
+    <button class="btnWrong">2. if i= 5 then</button>
+    <button class="btnWrong">3. if i ==5 then</button>
+    <button class="btnRight">4. if (i==5)</button>
+  </div>
 
-    <!-- All done page -->
-    <div id="page0" class="hide">
-      <h1>All done!</h1>
-      <h2 id="score"></h2>
-      <div class="fieldAligner">
-        <h3>Enter initials:</h3>
-        <input type="text" id="saveInitials" />
-        <button id="submit">Submit</button>
-      </div>
+  <!-- All done page -->
+  <div id="page0" class="hide">
+    <h1>All done!</h1>
+    <h2 id="score"></h2>
+    <div class="fieldAligner">
+      <h3>Enter initials:</h3>
+      <input type="text" id="saveInitials" />
+      <button id="submit">Submit</button>
     </div>
+  </div>
 
   <!-- Highscore with initials, tryAgain button and clear score button -->
   <div id="quizPageContainer" class="hide">
     <div id="quizPageHighScore">
-    <h1>Highscore</h1>
-    <p><strong>Score:</strong> <span id="highScoreSpan"></span></p>
-    <button id="tryAgain">Try Again</button>
-    <button id="clearHighScore">Clear Highscore</button>
+      <h1>Highscore</h1>
+      <p><strong>Score:</strong> <span id="highScoreSpan"></span></p>
+      <button id="tryAgain">Try Again</button>
+      <button id="clearHighScore">Clear Highscore</button>
+    </div>
   </div>
-</div>
 
   <!-- feedback when question is answered correct or incorrect -->
   <p id="correct" class="hide">Wow, Correct:)</p>
